@@ -83,7 +83,7 @@ def plot(x,t,title=''):
           title - string, title of the plot
        This function prints a plot to the screen with x on the x-axis, and t on the y-axis."""
     plt.rc('text', usetex=True)
-    plt.plot(x,t)
+    plt.plot(x,t,color="green")
     plt.xlabel(r'$x$', fontsize = 18)
     plt.ylabel(r'$t$', fontsize = 18)
     plt.xticks(fontsize = 16)
@@ -99,7 +99,7 @@ def parametric_plot(x,y,title = ''):
           title - string, desired title of the graph
        This function prints a plot to the screen with x on the x-axis, and y on the y-axis."""
     plt.rc('text', usetex=True)
-    plt.plot(x,y)
+    plt.plot(x,y,color="green")
     plt.xlabel(r'$x$', fontsize = 18)
     plt.ylabel(r'$\dot{x}$', fontsize = 18)
     plt.xticks(fontsize = 16)
@@ -125,5 +125,5 @@ def scatter_plot(x,y,n,title = ''):
     plt.xticks(fontsize = 16)
     plt.yticks(fontsize = 16)
     for k in range(n):
-        plt.scatter(x[6283*k],y[6283*k],color='b')
+        plt.scatter(x[6283*k],y[6283*k],color='g')
     plt.show()
