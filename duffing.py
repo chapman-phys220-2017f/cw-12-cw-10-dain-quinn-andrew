@@ -4,7 +4,9 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import numba as nb
 
+@nb.jit
 
 def y_dot(t,y,x,nu,F):
     """y_dot(t,y,x,nu,F)
@@ -18,26 +20,10 @@ def x_dot(y):
     """
     return y
 
+
 def rk(a, b, x0, y0, nu=0, F=0, xdot = x_dot, ydot = y_dot):
-    """rk(a, b, x0, y0, nu=0, F=0, xdot = x_dot, ydot = y_dot)
-          input:
-             a - float, beginning point of the time domain, such that t_initial = 2pi*a
-             b - float, end point of time domain, such that t_final = 2pi*b
-             x0 - float, initial position of the ball
-             y0 - float, initial velocity of the ball
-             nu - float, constant damping parameter
-             F - float, constant force amplitude parameter
-             xdot - function, part of the coupled differentiial equation.  The correct function
-             for xdot is passed in to rk.
-             ydot - function, part of the coupled differentiial equation.  The correct function
-             for ydot is passed in to rk.
-          output: (t,x_vec,y_vec)
-             t - numpy array, with mesh spacing dt = 0.001
-             x_vec - numpy array, contains the position of the ball at each time in the linspace
-             y_vec - numpy array, contains the velocity of the ball at each time in the linspace
-       All output numpy arrays are the same length, as determined by the input parameters 'a' and 'b'.
-             """
-    # Creating linspace
+   
+   
     dt = 0.001
     start = 2*a*np.pi
     end = 2*b*np.pi
