@@ -54,32 +54,33 @@ def rk(a, b, x0, y0, nu=0, F=0, xdot = x_dot, ydot = y_dot):
 def plot(x,t,title=''):
     plt.rc('text', usetex=True)
     plt.plot(x,t,color="green")
-    plt.xlabel(r'$x$', fontsize = 18)
-    plt.ylabel(r'$t$', fontsize = 18)
-    plt.xticks(fontsize = 16)
-    plt.yticks(fontsize = 16)
-    plt.title(title, fontsize = 20)
+    plt.xlabel(r'$x$', fontsize = 19)
+    plt.ylabel(r'$t$', fontsize = 19)
+    plt.xticks(fontsize = 17)
+    plt.yticks(fontsize = 17)
+    plt.title(title, fontsize = 21)
     plt.show()
 
 
 def parametric_plot(x,y,title = ''):
     plt.rc('text', usetex=True)
     plt.plot(x,y,color="green")
-    plt.xlabel(r'$x$', fontsize = 18)
-    plt.ylabel(r'$\dot{x}$', fontsize = 18)
-    plt.xticks(fontsize = 16)
-    plt.yticks(fontsize = 16)
-    plt.title(title, fontsize = 20)
+    plt.xlabel(r'$x$', fontsize = 19)
+    plt.ylabel(r'$\dot{x}$', fontsize = 19)
+    plt.xticks(fontsize = 17)
+    plt.yticks(fontsize = 17)
+    plt.title(title, fontsize = 21)
     plt.show()
 
 def scatter_plot(x,y,n,title = ''):
     plt.rc('text', usetex=True)
     ax = plt.subplot
-    plt.title(title, fontsize = 20)
-    plt.xlabel(r'$x$', fontsize = 18)
-    plt.ylabel(r'$\dot{x}$', fontsize = 18)
-    plt.xticks(fontsize = 16)
-    plt.yticks(fontsize = 16)
+    )
+    plt.xlabel(r'$x$', fontsize = 19)
+    plt.ylabel(r'$\dot{x}$', fontsize = 19)
+    plt.xticks(fontsize = 17)
+    plt.yticks(fontsize = 17)
+    plt.title(title, fontsize = 21
     for k in range(n):
         plt.scatter(x[6283*k],y[6283*k],color='g')
     plt.show()
