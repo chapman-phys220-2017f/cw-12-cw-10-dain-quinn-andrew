@@ -75,16 +75,13 @@ def parametric_plot(x,y,title = ''):
 def scatter_plot(x,y,n,title = ''):
     plt.rc('text', usetex=True)
     ax = plt.subplot
-    )
     plt.xlabel(r'$x$', fontsize = 19)
     plt.ylabel(r'$\dot{x}$', fontsize = 19)
     plt.xticks(fontsize = 17)
     plt.yticks(fontsize = 17)
-    plt.title(title, fontsize = 21
+    plt.title(title, fontsize = 21)
     for k in range(n):
         plt.scatter(x[6283*k],y[6283*k],color='g')
     plt.show()
 
     
-## define a recursive function for chnaging parameters      
-def gif(t,)
